@@ -1,6 +1,12 @@
+## Node.js Docker Best Practices Guide
+https://github.com/nodejs/docker-node/blob/main/docs/BestPractices.md
 
 ## Source
 https://www.docker.com/blog/how-to-setup-your-local-node-js-development-environment-using-docker/#How-to-set-up-a-local-Node.js-dev-environment--Part-2
+
+## 9 Tips for Containerizing Your Node.js Application
+https://www.docker.com/blog/9-tips-for-containerizing-your-node-js-application/
+
 ## 01-learning-center build
 cd 01-learning-center
 docker build -t 01-learning-center .
@@ -31,3 +37,10 @@ curl --request POST \
 "text": "some text",
 "owner": "user"
 }'
+
+
+### Enter the container
+$ docker exec -it <container id> /bin/bash
+
+###
+docker build -t node-dev-image .
