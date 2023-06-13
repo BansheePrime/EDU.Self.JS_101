@@ -1,0 +1,19 @@
+{
+    "name": "node-docker",
+    "version": "1.0.0",
+    "description": "simple container setup for Node.JS developer",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "keywords": [],
+    "author": "BansheePrime",
+    "license": "Eucational only",
+    "dependencies": {
+        "express": "^4.18.0"
+    },
+    "devDependencies": {
+        "nodemon":"^2.0.20"
+    }
+}
