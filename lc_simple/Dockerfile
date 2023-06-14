@@ -1,10 +1,11 @@
 FROM node:20-bullseye
-WORKDIR /app
-COPY package.json package.json
-COPY package-lock.json package-lock.json
-RUN npm install -g nodemon
-RUN npm install
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+RUN apt-get update && apt-get -y install \
+    vim
 RUN npm install express
-COPY . ./
+RUN npm install
+RUN npm install -g nodemon
+COPY . .
 EXPOSE 3333
 CMD ["npm", "run", "dev"]

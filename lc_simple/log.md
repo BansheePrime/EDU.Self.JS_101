@@ -5,6 +5,7 @@ https://www.docker.com/blog/how-to-setup-your-local-node-js-development-environm
 
 ### 2. Build Docker image
 docker build -t node-lc-image .
+
 #### Run image
 docker run -it --rm --name lc_dev -v $(pwd):/code node-lc-image bash
 
