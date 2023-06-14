@@ -43,12 +43,16 @@ curl --request POST \
 $ docker exec -it <container id> /bin/bash
 
 ###
-docker build -t node-code .
+docker build -t node-lc-image .
 
 ###
-docker run -v $(pwd):/usr/src/app -p 3333:3333 -d --name node-code node-code
+docker run -v $(pwd):/usr/src/app -p 3333:3333 -d --name node-code node-lc-image
 
 ### Решение ошибки: Error: Cannot find module 'express'
 https://stackoverflow.com/questions/39419295/cannot-finde-module-express-node-app-with-docker
 When you run your container with -v flag, which mean mount a directory from your Docker engine’s host into a container, will overwrite what you do in /home/Documents/node-app,such as npm install.
 -v /home:/usr/src/app
+
+### Решение ошибки с node_modules
+Добавить в запуск контейнера еще один параметр:
+-v /app/node_modules
