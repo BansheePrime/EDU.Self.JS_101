@@ -7,5 +7,6 @@ RUN npm install express
 RUN npm install
 RUN npm install -g nodemon
 COPY . .
-EXPOSE 3333
+ENV PORT 3333
+EXPOSE $PORT
 CMD ["npm", "run", "dev"]

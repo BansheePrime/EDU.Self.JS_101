@@ -56,3 +56,6 @@ When you run your container with -v flag, which mean mount a directory from your
 ### Решение ошибки с node_modules
 Добавить в запуск контейнера еще один параметр:
 -v /app/node_modules
+
+### Предпочтительно перевести docker volume в режим Read Only
+-v xx.yyy:/app:ro
