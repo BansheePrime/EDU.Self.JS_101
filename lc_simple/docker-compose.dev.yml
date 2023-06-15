@@ -1,0 +1,13 @@
+version: '3'
+services:
+  lc-node-app:
+    build: .
+    ports:
+      - "3333:3333"
+    volumes:
+      - ./:/usr/src/app
+      # - /usr/src/app/node_modules
+    environment:
+      - PORT=3333
+    # env_file:
+    #   - ./.env
